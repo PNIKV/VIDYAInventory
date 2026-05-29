@@ -98,7 +98,7 @@
     <p class="section-label" style="margin-top:8px">Choose Entry Method</p>
     <div class="entry-type-grid">
 
-      <div class="entry-card bulk-card" onclick="app.startBulkAudit()">
+      <div id="bulk-entry-card" class="entry-card bulk-card" onclick="app.startBulkAudit()">
         <div class="entry-icon"><i class="fa-solid fa-table-list"></i></div>
         <h3>Bulk Entry</h3>
         <p>Enter counts for all items in a single table. Fast and efficient for routine checks.</p>
@@ -286,7 +286,6 @@
 <!-- ══════════════════════════════════════
      SCRIPTS  (load order matters)
 ═══════════════════════════════════════ -->
-<script src="data/labs.js"></script>
 <script src="js/telegram.js"></script>
 <script src="js/export.js"></script>
 <script src="js/app.js"></script>

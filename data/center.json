@@ -1,0 +1,280 @@
+[
+  {
+    "id": "lab",
+    "name": "Basic Electronics Lab",
+    "shortName": "Electronics Lab",
+    "description": "Core safety gear, soldering tools & primary electronic components",
+    "icon": "fa-flask",
+    "color": "#34d399",
+    "categoryImg": "./data/images/lab/category.jpg",
+    "accessRoles": [
+      "admin",
+      "sub_admin"
+    ],
+    "items": [
+      {
+        "code": "SFTY-001",
+        "expectedQuantity": 1
+      },
+      {
+        "code": "STEM-001",
+        "expectedQuantity": 1
+      },
+      {
+        "code": "STEM-002",
+        "expectedQuantity": 18
+      },
+      {
+        "code": "STEM-003",
+        "expectedQuantity": 3
+      },
+      {
+        "code": "STEM-004",
+        "expectedQuantity": 6
+      },
+      {
+        "code": "STEM-005",
+        "expectedQuantity": 3
+      },
+      {
+        "code": "STEM-006",
+        "expectedQuantity": 9
+      },
+      {
+        "code": "STEM-007",
+        "expectedQuantity": 6
+      },
+      {
+        "code": "STEM-008",
+        "expectedQuantity": 3
+      },
+      {
+        "code": "STEM-009",
+        "expectedQuantity": 50
+      },
+      {
+        "code": "STEM-010",
+        "expectedQuantity": 3
+      },
+      {
+        "code": "STEM-011",
+        "expectedQuantity": 2
+      },
+      {
+        "code": "STEM-012",
+        "expectedQuantity": 10
+      },
+      {
+        "code": "STEM-013",
+        "expectedQuantity": 6
+      },
+      {
+        "code": "STEM-014",
+        "expectedQuantity": 4
+      }
+    ]
+  },
+  {
+    "id": "advLab",
+    "name": "Advanced Prototyping Lab",
+    "shortName": "Adv. Prototyping",
+    "description": "High-value instruments, AI hardware & fabrication equipment",
+    "icon": "fa-microchip",
+    "color": "#f472b6",
+    "categoryImg": "./data/images/advlab/category.jpg",
+    "accessRoles": [
+      "admin",
+      "sub_admin"
+    ],
+    "items": [
+      {
+        "code": "SFTY-001",
+        "expectedQuantity": 1
+      },
+      {
+        "code": "STEM-015",
+        "expectedQuantity": 1
+      },
+      {
+        "code": "STEM-016",
+        "expectedQuantity": 1
+      },
+      {
+        "code": "STEM-017",
+        "expectedQuantity": 2
+      },
+      {
+        "code": "STEM-018",
+        "expectedQuantity": 2
+      },
+      {
+        "code": "STEM-019",
+        "expectedQuantity": 2
+      },
+      {
+        "code": "STEM-020",
+        "expectedQuantity": 1
+      },
+      {
+        "code": "STEM-021",
+        "expectedQuantity": 5
+      },
+      {
+        "code": "STEM-022",
+        "expectedQuantity": 2
+      },
+      {
+        "code": "STEM-023",
+        "expectedQuantity": 8
+      },
+      {
+        "code": "STEM-024",
+        "expectedQuantity": 4
+      },
+      {
+        "code": "STEM-025",
+        "expectedQuantity": 1
+      },
+      {
+        "code": "STEM-026",
+        "expectedQuantity": 2
+      }
+    ]
+  },
+  {
+    "id": "schoolTrainer",
+    "name": "School Trainer Kit",
+    "shortName": "Trainer Kits",
+    "description": "Student-facing kits, sensors & session consumables",
+    "icon": "fa-chalkboard-user",
+    "color": "#fbbf24",
+    "categoryImg": "./data/images/trainer/category.jpg",
+    "accessRoles": [
+      "admin",
+      "sub_admin",
+      "school"
+    ],
+    "items": [
+      {
+        "code": "SFTY-001",
+        "expectedQuantity": 1
+      },
+      {
+        "code": "STEM-027",
+        "expectedQuantity": 5
+      },
+      {
+        "code": "STEM-028",
+        "expectedQuantity": 10
+      },
+      {
+        "code": "STEM-029",
+        "expectedQuantity": 10
+      },
+      {
+        "code": "STEM-030",
+        "expectedQuantity": 20
+      },
+      {
+        "code": "STEM-031",
+        "expectedQuantity": 20
+      },
+      {
+        "code": "STEM-032",
+        "expectedQuantity": 10
+      },
+      {
+        "code": "STEM-033",
+        "expectedQuantity": 15
+      },
+      {
+        "code": "STEM-034",
+        "expectedQuantity": 15
+      },
+      {
+        "code": "STEM-035",
+        "expectedQuantity": 50
+      },
+      {
+        "code": "STEM-036",
+        "expectedQuantity": 10
+      },
+      {
+        "code": "STEM-037",
+        "expectedQuantity": 15
+      },
+      {
+        "code": "STEM-038",
+        "expectedQuantity": 10
+      }
+    ]
+  },
+  {
+    "id": "device",
+    "name": "Devices & IT Equipment",
+    "shortName": "IT Devices",
+    "description": "Computers, monitors, peripherals & networking gear",
+    "icon": "fa-desktop",
+    "color": "#60a5fa",
+    "categoryImg": "./data/images/devices/category.jpg",
+    "accessRoles": [
+      "admin",
+      "sub_admin",
+      "school"
+    ],
+    "items": [
+      {
+        "code": "SFTY-001",
+        "expectedQuantity": 1
+      },
+      {
+        "code": "IT-039",
+        "expectedQuantity": 10
+      },
+      {
+        "code": "IT-040",
+        "expectedQuantity": 10
+      },
+      {
+        "code": "IT-041",
+        "expectedQuantity": 10
+      },
+      {
+        "code": "IT-042",
+        "expectedQuantity": 10
+      },
+      {
+        "code": "IT-043",
+        "expectedQuantity": 3
+      },
+      {
+        "code": "IT-044",
+        "expectedQuantity": 1
+      },
+      {
+        "code": "STEM-045",
+        "expectedQuantity": 5
+      },
+      {
+        "code": "STEM-046",
+        "expectedQuantity": 1
+      },
+      {
+        "code": "STEM-047",
+        "expectedQuantity": 10
+      },
+      {
+        "code": "IT-048",
+        "expectedQuantity": 5
+      },
+      {
+        "code": "STEM-049",
+        "expectedQuantity": 8
+      },
+      {
+        "code": "STEM-050",
+        "expectedQuantity": 15
+      }
+    ]
+  }
+]

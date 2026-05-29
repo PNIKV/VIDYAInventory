@@ -1,0 +1,116 @@
+[
+  {
+    "username": "dms",
+    "password": "D06C9452",
+    "role": "school",
+    "displayName": "DMS School"
+  },
+  {
+    "username": "dvs",
+    "password": "72C8E609",
+    "role": "school",
+    "displayName": "DVS School"
+  },
+  {
+    "username": "mush",
+    "password": "535EE40C",
+    "role": "school",
+    "displayName": "MUSH School"
+  },
+  {
+    "username": "nuss",
+    "password": "FB1F776B",
+    "role": "school",
+    "displayName": "NUSS School"
+  },
+  {
+    "username": "dbs",
+    "password": "7823F863",
+    "role": "school",
+    "displayName": "DBS School"
+  },
+  {
+    "username": "kvv",
+    "password": "D14E5DF4",
+    "role": "school",
+    "displayName": "KVV School"
+  },
+  {
+    "username": "svvp",
+    "password": "262C033A",
+    "role": "school",
+    "displayName": "SVVP School"
+  },
+  {
+    "username": "ssvp",
+    "password": "DD9BCA9F",
+    "role": "school",
+    "displayName": "SSVP School"
+  },
+  {
+    "username": "avmhs",
+    "password": "E364A806",
+    "role": "school",
+    "displayName": "AVMHS School"
+  },
+  {
+    "username": "dbas",
+    "password": "5248419B",
+    "role": "school",
+    "displayName": "DBAS School"
+  },
+  {
+    "username": "vmt",
+    "password": "EE8EC2F9",
+    "role": "school",
+    "displayName": "VMT School"
+  },
+  {
+    "username": "rnhs",
+    "password": "3D421B4B",
+    "role": "school",
+    "displayName": "RNHS School"
+  },
+  {
+    "username": "mas",
+    "password": "B0F83F2C",
+    "role": "school",
+    "displayName": "MAS School"
+  },
+  {
+    "username": "yva",
+    "password": "45EEA89E",
+    "role": "school",
+    "displayName": "YVA School"
+  },
+  {
+    "username": "pajv",
+    "password": "FB2E415F",
+    "role": "school",
+    "displayName": "PAJV School"
+  },
+  {
+    "username": "adsa",
+    "password": "72CB6AC1",
+    "role": "school",
+    "displayName": "ADSA School"
+  },
+  {
+    "username": "mdks",
+    "password": "62A3C4FA",
+    "role": "school",
+    "displayName": "MDKS School"
+  },
+  {
+    "username": "rgv",
+    "password": "AAB28545",
+    "role": "school",
+    "displayName": "RGV School"
+  },
+  {
+    "username": "rmv",
+    "password": "F0C9684C",
+    "role": "school",
+    "displayName": "RMV School"
+  }
+]

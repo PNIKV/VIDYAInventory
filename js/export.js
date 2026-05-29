@@ -90,14 +90,14 @@ const exporter = {
     // Item detail block
     lines.push('"── ITEM DETAILS ──"');
     if (rec.entryType === 'Individual') {
-      lines.push('"#","Item Name","Category","Expected Qty","Status"');
+      lines.push('"#","Item Code","Item Name","Domain","Price","Category","Expected Qty","Status"');
       rec.details.forEach((d, i) => {
-        lines.push(`${i + 1},"${d.item}","${d.category}",${d.expected},"${d.status}"`);
+        lines.push(`${i + 1},"${d.code}","${d.item}","${d.domain}",${d.price},"${d.category}",${d.expected},"${d.status}"`);
       });
     } else {
-      lines.push('"#","Item Name","Category","Expected Qty","Counted Qty","Broken","Missing"');
+      lines.push('"#","Item Code","Item Name","Domain","Price","Category","Expected Qty","Counted Qty","Broken","Missing"');
       rec.details.forEach((d, i) => {
-        lines.push(`${i + 1},"${d.item}","${d.category}",${d.expected},${d.present},${d.broken},${d.missing}`);
+        lines.push(`${i + 1},"${d.code}","${d.item}","${d.domain}",${d.price},"${d.category}",${d.expected},${d.present},${d.broken},${d.missing}`);
       });
     }
 
@@ -226,7 +226,7 @@ const exporter = {
 
           ctx.fillStyle = '#e2e8f0';
           ctx.font      = '11px Arial';
-          ctx.fillText(d.item.substring(0, 30), 34, y + 16);
+          ctx.fillText(`[${d.code}] ${d.item}`.substring(0, 38), 34, y + 16);
 
           // Status / qty
           let statusText, statusColor;

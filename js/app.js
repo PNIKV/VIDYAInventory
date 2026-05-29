@@ -54,7 +54,46 @@ const app = {
   },
 
   /* ── Init ────────────────────────────── */
-  init: function () {
+  init: async function () {
+    try {
+      const [config, admins, schools, itemsArr, centers] = await Promise.all([
+        fetch('data/config.json').then(r => r.json()),
+        fetch('data/admin.json').then(r => r.json()),
+        fetch('data/school.json').then(r => r.json()),
+        fetch('data/items.json').then(r => r.json()),
+        fetch('data/center.json').then(r => r.json())
+      ]);
+
+      const itemsMap = {};
+      itemsArr.forEach(i => itemsMap[i.code] = i);
+
+      centers.forEach(c => {
+        c.items = c.items.map(ci => {
+          const fullItem = itemsMap[ci.code];
+          return {
+            id: ci.code,
+            code: ci.code,
+            name: fullItem.name,
+            img: fullItem.img,
+            category: fullItem.category,
+            domain: fullItem.domain,
+            price: fullItem.price,
+            quantity: ci.expectedQuantity
+          };
+        });
+      });
+
+      window.LABS_DATA = {
+        config: config,
+        users: [...admins, ...schools],
+        labs: centers
+      };
+    } catch (err) {
+      console.error("Failed to load application data", err);
+      alert("Failed to load data. Please ensure you are running on a web server.");
+      return;
+    }
+
     document.getElementById('login-form').addEventListener('submit', e => {
       e.preventDefault();
       this.login();
@@ -103,7 +142,7 @@ const app = {
 
     // Admin-only controls row
     const adminRow = document.getElementById('admin-controls');
-    adminRow.style.display = u.role === 'admin' ? 'block' : 'none';
+    adminRow.style.display = ['admin', 'sub_admin'].includes(u.role) ? 'block' : 'none';
 
     // Render lab cards filtered by role
     const labs = this._labsForRole(u.role);
@@ -139,6 +178,15 @@ const app = {
     this.currentLabId = labId;
     this.currentLab   = this._labById(labId);
     document.getElementById('entry-lab-name').textContent = this.currentLab.name;
+    
+    // Hide bulk option for schools or for School Trainer Kit
+    const bulkCard = document.getElementById('bulk-entry-card');
+    if (this.currentUser.role === 'school' || labId === 'schoolTrainer') {
+      bulkCard.style.display = 'none';
+    } else {
+      bulkCard.style.display = 'block';
+    }
+    
     this.switchView('entry-selection-view');
   },
 
@@ -157,8 +205,9 @@ const app = {
           <div class="bulk-item-cell">
             ${this._imgTag(item.img, 'bulk-thumb', item.name)}
             <div>
-              <span class="bulk-item-name">${item.name}</span>
+              <span class="bulk-item-name">[${item.code}] ${item.name}</span>
               <span class="bulk-cat-badge">${item.category}</span>
+              <span class="bulk-cat-badge" style="background:#0f172a; color:#10b981">₹${item.price}</span>
             </div>
           </div>
           <div class="bulk-exp">Expected: <strong>${item.quantity}</strong></div>
@@ -186,7 +235,7 @@ const app = {
       well   += present;
       broken += brk;
       missing += miss;
-      details.push({ item: item.name, category: item.category, expected: item.quantity, present, broken: brk, missing: miss });
+      details.push({ item: item.name, code: item.code, domain: item.domain, price: item.price, category: item.category, expected: item.quantity, present, broken: brk, missing: miss });
     });
 
     const rec = this._buildRecord({ well, broken, missing }, details);
@@ -200,16 +249,30 @@ const app = {
     this.entryType = 'Individual';
     this.auditData = {};
     const lab   = this.currentLab;
-    const items = lab.items;
+    
+    // Dynamically expand items based on expectedQuantity
+    this._currentExpandedItems = [];
+    lab.items.forEach(item => {
+      for (let i = 1; i <= item.quantity; i++) {
+        const suffix = String(i).padStart(3, '0');
+        this._currentExpandedItems.push({
+          ...item,
+          id: `${item.id}-${suffix}`,
+          code: `${item.code}-${suffix}`,
+          name: `${item.name} - ${suffix}`,
+          quantity: 1
+        });
+      }
+    });
 
     document.getElementById('indiv-audit-title').textContent = lab.shortName;
-    document.getElementById('audit-total').textContent       = items.length;
+    document.getElementById('audit-total').textContent       = this._currentExpandedItems.length;
     this._updateIndivProgress();
 
     const container = document.getElementById('indiv-audit-container');
     container.innerHTML = '';
 
-    items.forEach(item => {
+    this._currentExpandedItems.forEach(item => {
       const card = document.createElement('div');
       card.className = 'audit-item';
       card.id        = `acard-${item.id}`;
@@ -217,8 +280,9 @@ const app = {
         <div class="item-header">
           ${this._imgTag(item.img, 'item-img', item.name)}
           <div class="item-meta">
-            <h4>${item.name}</h4>
+            <h4>[${item.code}] ${item.name}</h4>
             <span class="bulk-cat-badge">${item.category}</span>
+            <span class="bulk-cat-badge" style="background:#0f172a; color:#10b981">₹${item.price}</span>
             <p>Expected: <strong>${item.quantity}</strong></p>
           </div>
         </div>
@@ -243,7 +307,7 @@ const app = {
     if (clicked) clicked.classList.add('selected');
 
     // Scroll to next un-answered card
-    const items   = this.currentLab.items;
+    const items   = this._currentExpandedItems;
     const current = items.findIndex(i => i.id === itemId);
     if (current < items.length - 1) {
       const next = items[current + 1];
@@ -257,7 +321,7 @@ const app = {
   },
 
   _updateIndivProgress: function () {
-    const total     = this.currentLab.items.length;
+    const total     = this._currentExpandedItems.length;
     const completed = Object.keys(this.auditData).length;
     document.getElementById('audit-progress').textContent = completed;
 
@@ -269,7 +333,7 @@ const app = {
 
   submitIndividualAudit: async function () {
     const lab   = this.currentLab;
-    const items = lab.items;
+    const items = this._currentExpandedItems;
     let   well  = 0, broken = 0, missing = 0;
     const details = [];
 
@@ -278,7 +342,7 @@ const app = {
       if (status === 'Well Present') well++;
       else if (status === 'Broken')  broken++;
       else                           missing++;
-      details.push({ item: item.name, category: item.category, expected: item.quantity, status });
+      details.push({ item: item.name, code: item.code, domain: item.domain, price: item.price, category: item.category, expected: item.quantity, status });
     });
 
     const rec = this._buildRecord({ well, broken, missing }, details);
@@ -355,8 +419,8 @@ ${issueLines.length ? '\n🚨 <b>Issues:</b>' + issueLines : '\n✨ All items ac
       card.className = 'history-user-card glass-card';
       card.innerHTML = `
         <div class="hu-info">
-          <div class="hu-avatar" style="background:${u.role === 'admin' ? '#3b82f620' : '#fbbf2420'}; color:${u.role === 'admin' ? '#60a5fa' : '#fbbf24'}">
-            <i class="fa-solid fa-${u.role === 'admin' ? 'user-shield' : 'chalkboard-user'}"></i>
+          <div class="hu-avatar" style="background:${['admin', 'sub_admin'].includes(u.role) ? '#3b82f620' : '#fbbf2420'}; color:${['admin', 'sub_admin'].includes(u.role) ? '#60a5fa' : '#fbbf24'}">
+            <i class="fa-solid fa-${['admin', 'sub_admin'].includes(u.role) ? 'user-shield' : 'chalkboard-user'}"></i>
           </div>
           <div>
             <strong>${u.displayName}</strong>

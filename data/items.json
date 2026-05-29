@@ -1,0 +1,418 @@
+[
+  {
+    "code": "SFTY-001",
+    "name": "Fire Extinguisher",
+    "img": "./data/images/lab/fire_extinguisher.jpg",
+    "category": "Safety",
+    "domain": "SFTY",
+    "price": 1500
+  },
+  {
+    "code": "STEM-001",
+    "name": "First-Aid Kit",
+    "img": "./data/images/lab/first_aid_kit.jpg",
+    "category": "Safety",
+    "domain": "STEM",
+    "price": 867
+  },
+  {
+    "code": "STEM-002",
+    "name": "Safety Goggles",
+    "img": "./data/images/lab/safety_goggles.jpg",
+    "category": "Safety",
+    "domain": "STEM",
+    "price": 4739
+  },
+  {
+    "code": "STEM-003",
+    "name": "Soldering Station",
+    "img": "./data/images/lab/soldering_station.jpg",
+    "category": "Tools",
+    "domain": "STEM",
+    "price": 4222
+  },
+  {
+    "code": "STEM-004",
+    "name": "Solder Wire (Roll)",
+    "img": "./data/images/lab/solder_wire.jpg",
+    "category": "Consumables",
+    "domain": "STEM",
+    "price": 4164
+  },
+  {
+    "code": "STEM-005",
+    "name": "Digital Multimeter",
+    "img": "./data/images/lab/multimeter.jpg",
+    "category": "Instruments",
+    "domain": "STEM",
+    "price": 4731
+  },
+  {
+    "code": "STEM-006",
+    "name": "Breadboard (Full Size)",
+    "img": "./data/images/lab/breadboard.jpg",
+    "category": "Prototyping",
+    "domain": "STEM",
+    "price": 657
+  },
+  {
+    "code": "STEM-007",
+    "name": "Arduino Uno R3",
+    "img": "./data/images/lab/arduino_uno.jpg",
+    "category": "Microcontrollers",
+    "domain": "STEM",
+    "price": 1309
+  },
+  {
+    "code": "STEM-008",
+    "name": "Raspberry Pi 4B (4GB)",
+    "img": "./data/images/lab/raspberry_pi.jpg",
+    "category": "SBCs",
+    "domain": "STEM",
+    "price": 2074
+  },
+  {
+    "code": "STEM-009",
+    "name": "LEDs – Assorted Pack",
+    "img": "./data/images/lab/leds.jpg",
+    "category": "Components",
+    "domain": "STEM",
+    "price": 4967
+  },
+  {
+    "code": "STEM-010",
+    "name": "Resistor Kit (600pcs)",
+    "img": "./data/images/lab/resistors.jpg",
+    "category": "Components",
+    "domain": "STEM",
+    "price": 4238
+  },
+  {
+    "code": "STEM-011",
+    "name": "Capacitor Kit",
+    "img": "./data/images/lab/capacitors.jpg",
+    "category": "Components",
+    "domain": "STEM",
+    "price": 2701
+  },
+  {
+    "code": "STEM-012",
+    "name": "Jumper Wire Set (M-M/F)",
+    "img": "./data/images/lab/jumper_wires.jpg",
+    "category": "Wiring",
+    "domain": "STEM",
+    "price": 5063
+  },
+  {
+    "code": "STEM-013",
+    "name": "USB Power Adapters (5V)",
+    "img": "./data/images/lab/usb_adapter.jpg",
+    "category": "Power",
+    "domain": "STEM",
+    "price": 2659
+  },
+  {
+    "code": "STEM-014",
+    "name": "Antistatic Wrist Strap",
+    "img": "./data/images/lab/wrist_strap.jpg",
+    "category": "Safety",
+    "domain": "STEM",
+    "price": 1926
+  },
+  {
+    "code": "STEM-015",
+    "name": "Oscilloscope – DSO (100MHz)",
+    "img": "./data/images/advlab/oscilloscope.jpg",
+    "category": "Instruments",
+    "domain": "STEM",
+    "price": 3164
+  },
+  {
+    "code": "STEM-016",
+    "name": "Function / Signal Generator",
+    "img": "./data/images/advlab/function_generator.jpg",
+    "category": "Instruments",
+    "domain": "STEM",
+    "price": 2602
+  },
+  {
+    "code": "STEM-017",
+    "name": "Benchtop Power Supply (30V/5A)",
+    "img": "./data/images/advlab/power_supply.jpg",
+    "category": "Instruments",
+    "domain": "STEM",
+    "price": 2816
+  },
+  {
+    "code": "STEM-018",
+    "name": "Raspberry Pi 5 (8GB)",
+    "img": "./data/images/advlab/rpi5.jpg",
+    "category": "SBCs",
+    "domain": "STEM",
+    "price": 2923
+  },
+  {
+    "code": "STEM-019",
+    "name": "Jetson Nano Developer Kit",
+    "img": "./data/images/advlab/jetson_nano.jpg",
+    "category": "AI Hardware",
+    "domain": "STEM",
+    "price": 2348
+  },
+  {
+    "code": "STEM-020",
+    "name": "3D Printer (FDM – Ender 3)",
+    "img": "./data/images/advlab/3d_printer.jpg",
+    "category": "Fabrication",
+    "domain": "STEM",
+    "price": 2874
+  },
+  {
+    "code": "STEM-021",
+    "name": "PLA Filament Spools (1kg)",
+    "img": "./data/images/advlab/pla_filament.jpg",
+    "category": "Consumables",
+    "domain": "STEM",
+    "price": 1197
+  },
+  {
+    "code": "STEM-022",
+    "name": "Drone Frame Kit (450mm)",
+    "img": "./data/images/advlab/drone_frame.jpg",
+    "category": "Robotics",
+    "domain": "STEM",
+    "price": 4293
+  },
+  {
+    "code": "STEM-023",
+    "name": "BLDC Motors + ESC (Set of 4)",
+    "img": "./data/images/advlab/bldc_esc.jpg",
+    "category": "Robotics",
+    "domain": "STEM",
+    "price": 905
+  },
+  {
+    "code": "STEM-024",
+    "name": "LiPo Battery 2200mAh 3S",
+    "img": "./data/images/advlab/lipo_battery.jpg",
+    "category": "Power",
+    "domain": "STEM",
+    "price": 508
+  },
+  {
+    "code": "STEM-025",
+    "name": "Soldering Rework Station (Hot)",
+    "img": "./data/images/advlab/rework_station.jpg",
+    "category": "Tools",
+    "domain": "STEM",
+    "price": 4626
+  },
+  {
+    "code": "STEM-026",
+    "name": "Digital Caliper (150mm)",
+    "img": "./data/images/advlab/caliper.jpg",
+    "category": "Measurement",
+    "domain": "STEM",
+    "price": 3305
+  },
+  {
+    "code": "STEM-027",
+    "name": "Basic Toolkit Set",
+    "img": "./data/images/trainer/toolkit.jpg",
+    "category": "Tools",
+    "domain": "STEM",
+    "price": 3377
+  },
+  {
+    "code": "STEM-028",
+    "name": "Arduino Starter Kit",
+    "img": "./data/images/trainer/arduino_kit.jpg",
+    "category": "Kits",
+    "domain": "STEM",
+    "price": 2097
+  },
+  {
+    "code": "STEM-029",
+    "name": "Motor Driver – L298N",
+    "img": "./data/images/trainer/motor_driver.jpg",
+    "category": "Modules",
+    "domain": "STEM",
+    "price": 3098
+  },
+  {
+    "code": "STEM-030",
+    "name": "DC Gear Motor (6V)",
+    "img": "./data/images/trainer/dc_motor.jpg",
+    "category": "Actuators",
+    "domain": "STEM",
+    "price": 2345
+  },
+  {
+    "code": "STEM-031",
+    "name": "Robot Chassis Wheels",
+    "img": "./data/images/trainer/wheels.jpg",
+    "category": "Mechanical",
+    "domain": "STEM",
+    "price": 3606
+  },
+  {
+    "code": "STEM-032",
+    "name": "Ultrasonic Sensor HC-SR04",
+    "img": "./data/images/trainer/ultrasonic.jpg",
+    "category": "Sensors",
+    "domain": "STEM",
+    "price": 4079
+  },
+  {
+    "code": "STEM-033",
+    "name": "IR Line Follower Sensor",
+    "img": "./data/images/trainer/ir_sensor.jpg",
+    "category": "Sensors",
+    "domain": "STEM",
+    "price": 430
+  },
+  {
+    "code": "STEM-034",
+    "name": "9V PP3 Battery",
+    "img": "./data/images/trainer/9v_battery.jpg",
+    "category": "Power",
+    "domain": "STEM",
+    "price": 4970
+  },
+  {
+    "code": "STEM-035",
+    "name": "Jumper Wire Set",
+    "img": "./data/images/trainer/jumper_wires.jpg",
+    "category": "Wiring",
+    "domain": "STEM",
+    "price": 903
+  },
+  {
+    "code": "STEM-036",
+    "name": "Mini Breadboard",
+    "img": "./data/images/trainer/mini_breadboard.jpg",
+    "category": "Prototyping",
+    "domain": "STEM",
+    "price": 3182
+  },
+  {
+    "code": "STEM-037",
+    "name": "Servo Motor (SG90)",
+    "img": "./data/images/trainer/servo.jpg",
+    "category": "Actuators",
+    "domain": "STEM",
+    "price": 3692
+  },
+  {
+    "code": "STEM-038",
+    "name": "LED Traffic Light Module",
+    "img": "./data/images/trainer/traffic_led.jpg",
+    "category": "Modules",
+    "domain": "STEM",
+    "price": 2064
+  },
+  {
+    "code": "IT-039",
+    "name": "Monitor 24-inch FHD",
+    "img": "./data/images/devices/monitor.jpg",
+    "category": "Display",
+    "domain": "IT",
+    "price": 4332
+  },
+  {
+    "code": "IT-040",
+    "name": "Keyboard – USB Wired",
+    "img": "./data/images/devices/keyboard.jpg",
+    "category": "Input",
+    "domain": "IT",
+    "price": 440
+  },
+  {
+    "code": "IT-041",
+    "name": "Mouse – USB Optical",
+    "img": "./data/images/devices/mouse.jpg",
+    "category": "Input",
+    "domain": "IT",
+    "price": 4975
+  },
+  {
+    "code": "IT-042",
+    "name": "Desktop CPU Tower",
+    "img": "./data/images/devices/cpu.jpg",
+    "category": "Computing",
+    "domain": "IT",
+    "price": 3557
+  },
+  {
+    "code": "IT-043",
+    "name": "Trainer Laptop",
+    "img": "./data/images/devices/laptop.jpg",
+    "category": "Computing",
+    "domain": "IT",
+    "price": 3043
+  },
+  {
+    "code": "IT-044",
+    "name": "Projector – Full HD",
+    "img": "./data/images/devices/projector.jpg",
+    "category": "Display",
+    "domain": "IT",
+    "price": 2921
+  },
+  {
+    "code": "STEM-045",
+    "name": "UPS Battery Backup (600VA)",
+    "img": "./data/images/devices/ups.jpg",
+    "category": "Power",
+    "domain": "STEM",
+    "price": 3643
+  },
+  {
+    "code": "STEM-046",
+    "name": "Network Switch 8-port",
+    "img": "./data/images/devices/switch.jpg",
+    "category": "Networking",
+    "domain": "STEM",
+    "price": 3770
+  },
+  {
+    "code": "STEM-047",
+    "name": "HDMI Cable 1.5m",
+    "img": "./data/images/devices/hdmi.jpg",
+    "category": "Cables",
+    "domain": "STEM",
+    "price": 3099
+  },
+  {
+    "code": "IT-048",
+    "name": "Webcam 1080p",
+    "img": "./data/images/devices/webcam.jpg",
+    "category": "Peripherals",
+    "domain": "IT",
+    "price": 4712
+  },
+  {
+    "code": "STEM-049",
+    "name": "Extension Board (6-port)",
+    "img": "./data/images/devices/extension.jpg",
+    "category": "Power",
+    "domain": "STEM",
+    "price": 3390
+  },
+  {
+    "code": "STEM-050",
+    "name": "Ethernet Cables (2m)",
+    "img": "./data/images/devices/ethernet.jpg",
+    "category": "Networking",
+    "domain": "STEM",
+    "price": 3337
+  },
+  {
+    "code": "FURN-001",
+    "name": "Office Chair",
+    "img": "./data/images/devices/chair.jpg",
+    "category": "Furniture",
+    "domain": "FURN",
+    "price": 2500
+  }
+]
